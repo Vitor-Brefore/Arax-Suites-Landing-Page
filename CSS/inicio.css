@@ -1,0 +1,175 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+/* fundos de imagem */
+.background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem cubra a área sem distorção */
+}
+
+/* Logos */
+.logo img {
+  position: relative;
+  z-index: 10;
+  width: 27vw;
+  height: 27vw;
+}
+
+#inicio {
+  position: relative;
+  height: 100vh; /* Já está certo */
+  width: 100vw; /* Adicionado para garantir a largura */
+  background-color: #ded3cd;
+  z-index: 1;
+  overflow: hidden; /* Adicionado para esconder o conteúdo que extravasa */
+}
+
+.icones {
+  font-family: Arial, sans-serif;
+  background-color: transparent;
+  position: relative;
+  margin: 0;
+  display: flex;
+  z-index: 19999;
+}
+
+/* Estilo para o contêiner de ícones */
+.social-media {
+  display: flex;
+  gap: 20px;
+}
+
+/* Estilo para o contêiner individual do ícone */
+.icon-box {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+/* Estilos para os ícones */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #444;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2em;
+  transition: background-color 0.3s, transform 0.3s;
+  z-index: 10000;
+}
+
+/* Efeitos de hover para os ícones */
+.icon:hover {
+  background-color: #007bff;
+  transform: scale(1.1);
+}
+
+/* Estilos específicos para cada ícone */
+.icon.instagram:hover {
+  background-color: #e1306c;
+}
+
+.icon.facebook:hover {
+  background-color: #1877f2;
+}
+
+.icon.whatsapp:hover {
+  background-color: #25d366;
+}
+
+/* Estilos para os labels */
+.icon-box label {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s, bottom 0.3s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Efeito flutuante para os labels quando o ícone está focado */
+.icon-box .icon:focus + label,
+.icon-box .icon:hover + label {
+  bottom: -40px;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .background {
+    margin-top: 10px;
+  }
+
+  .logo img {
+    margin-top: 180px;
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .icones {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .social-media {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .icon-box {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 70vw;
+    height: 70vw;
+    margin-top: 180px;  
+  }
+
+  .icon-box {
+    width: 30px;
+    height: 30px;
+  }
+
+  .icon {
+    font-size: 1em;
+  }
+
+  .icon-box label {
+    font-size: 0.8em;
+  }
+}

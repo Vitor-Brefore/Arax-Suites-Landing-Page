@@ -1,0 +1,134 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  background: url("/Araxa suites/img/concha.png") no-repeat center center fixed; /* Imagem de fundo centralizada e fixa */
+  position: relative; /* Para o posicionamento relativo do conteúdo interno */
+  width: 100vw; /* Largura total da viewport */
+  height: 100vh; /* Altura total da viewport */
+  background-size: cover; /* Cobre completamente a área do contêiner */
+  background-attachment: fixed; /* Imagem de fundo fixa */
+  background-position: center; /* Centraliza a imagem */
+  margin: 0; /* Remove margens externas */
+  overflow: hidden; /* Remove possíveis barras de rolagem */
+}
+
+.form-container {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+
+  padding: 20px;
+  width: 400px;
+  max-width: 100%;
+  text-align: center;
+  border: 2px solid #ffffff;
+}
+
+.format {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  text-align: left;
+  color: #ffffff;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+  border-color: #ffffff;
+  outline: none;
+}
+
+#button {
+  position: relative;
+  left: 30%;
+  padding-top: 10px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.3em 0.8em 0.9em;
+  color: white;
+  background: #8b4513;
+  background: linear-gradient(to right, #000000, #dd8241, #e9975d);
+  border: none;
+  letter-spacing: 0.05em;
+  border-radius: 16px;
+}
+
+button svg {
+  margin-right: 3px;
+  transform: rotate(30deg);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button span {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button:hover svg {
+  transform: translateX(5px) rotate(90deg);
+}
+
+button:hover span {
+  transform: translateX(7px);
+}
+input::placeholder {
+  color: #999;
+}
+
+#form {
+  display: flex;
+  padding-top: 70px;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    margin: 20px auto;
+    width: 90vw;
+    height: 90vh;
+  }
+
+  #button {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

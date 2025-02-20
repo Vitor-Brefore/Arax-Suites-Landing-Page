@@ -1,0 +1,174 @@
+#agendar {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+  background: url("/Araxa suites/img/background-beach-daylight-desert.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  gap: 150px;
+  z-index: 1;
+  flex-direction: row;
+}
+
+#calendar {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  overflow: hidden;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #8b4513;
+  color: white;
+}
+
+.calendar-header button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.calendar-body {
+  padding: 10px 20px;
+}
+
+.day-names,
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.day-names div {
+  font-weight: bold;
+  padding: 10px 0;
+  color: #333;
+}
+
+.days div {
+  padding: 10px;
+  margin: 2px;
+  background: #ecf0f1;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.days div.selected {
+  background: green;
+  color: white;
+}
+
+.days div:hover {
+  background: #bdc3c7;
+}
+
+.days div.inactive {
+  background: #f4f4f4;
+  color: #999;
+}
+
+.days div.today {
+  background: #8b4513;
+  color: white;
+  font-weight: bold;
+}
+
+#month-year {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.agendar h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.highlight {
+  font-size: 100px;
+}
+
+.Btn {
+  width: 260px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(15, 15, 15);
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+
+.svgIcon {
+  width: 24px;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.Btn::before {
+  width: 260px;
+  height: 260px;
+  position: absolute;
+  content: "";
+  background-color: white;
+  border-radius: 50%;
+  left: -100%;
+  top: 0;
+  transition-duration: 0.3s;
+  mix-blend-mode: difference;
+}
+
+.Btn:hover::before {
+  transition-duration: 0.3s;
+  transform: translate(100%, -50%);
+  border-radius: 0;
+}
+
+.Btn:active {
+  transform: translate(5px, 5px);
+  transition-duration: 0.3s;
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+  #agendar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #month-year{
+    font-size: 14px;
+  }
+
+  #calendar {
+    width: 90%;
+  }
+
+  .Btn {
+    width: 260px;
+    height: 80px;
+    font-size: 20px;
+  }
+}

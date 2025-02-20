@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.background img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Logos */
+.logo img {
+  position: relative;
+  z-index: 10;
+  width: 20vw;
+  height: 20vw;
+  top: 230px;
+  left: 20%;
+  cursor: pointer;
+}
+
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.2s ease;
+  left: 45%;
+  top: -140px;
+}
+
+.wrapper.active-popup {
+  transform: scale(1);
+}
+
+.wrapper .form-box {
+  width: 100%;
+  padding: 40px;
+}
+
+.wrapper.active {
+  height: 520px;
+}
+
+.wrapper .form-box.login {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+  position: absolute;
+  transition: 0.5s;
+  transform: translate(400px);
+}
+
+.wrapper.active .form-box.register {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.form-box.register {
+  display: none; /* Inicialmente oculto */
+}
+
+.wrapper.active .form-box.login {
+  transform: translateX(-400px);
+}
+
+.wrapper.active .form-box.register {
+  display: block; /* Exibir quando ativo */
+  transform: translateX(0);
+}
+
+.form-box h2 {
+  font-size: 2em;
+  color: rgba(204, 122, 0);
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #ffffff;
+  margin: 30px 0;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #ffffff;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+input:focus,
+input:valid {
+  color: #fff;
+  border: 4px solid rgb(204, 122, 0);
+}
+
+input:focus + #labeline,
+input:valid + #labeline {
+  color: white;
+  height: 30px;
+  line-height: 30px;
+  transform: translate(-8px, -40px) scale(0.88);
+}
+input:focus + #label,
+input:valid + #label {
+  color: white;
+  height: 30px;
+  line-height: 30px;
+  transform: translate(-8px, -40px) scale(0.88);
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: rgb(204, 122, 0);
+  line-height: 57px;
+}
+
+.remember-forgot {
+  font-size: 0.9em;
+  color: #ffffff;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  justify-content: space-between;
+}
+
+.remember-forgot label input {
+  accent-color: white;
+  margin-right: 3px;
+}
+
+.remember-forgot a {
+  color: #f3f3f3;
+  text-decoration: none;
+}
+
+.remember-forgot a {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: rgb(204, 122, 0);
+  font-weight: 500;
+}
+
+.login-register {
+  font-size: 0.9em;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+
+.login-register p a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-register p a {
+  text-decoration: underline;
+}
+
+input:focus + #plack,
+input:valid + #plack {
+  color: white;
+  height: 30px;
+  line-height: 30px;
+  transform: translate(-8px, -40px) scale(0.88);
+}
+input:focus + #tudum,
+input:valid + #tudum {
+  color: white;
+  height: 30px;
+  line-height: 30px;
+  transform: translate(-8px, -40px) scale(0.88);
+}
+input:focus + #monkey,
+input:valid + #monkey {
+  color: white;
+  height: 30px;
+  line-height: 30px;
+  transform: translate(-8px, -40px) scale(0.88);
+}
+
+@media (max-width: 768px) {
+
+
+    .logo{
+        position: absolute;
+        top: 40%;
+        left: 22%;
+    }
+
+    .logo img{
+        width: 150px;
+        height: auto;
+    }
+    
+    .wrapper{
+        width: 90vw;
+        height: auto;
+        position: relative;
+        left: 0%;
+        top: 0%;
+        margin: 0 auto;
+    }
+}
