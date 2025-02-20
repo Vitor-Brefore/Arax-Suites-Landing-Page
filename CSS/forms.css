@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: gray;
   margin: 0;
   padding: 0;
   background-repeat: no-repeat;
@@ -11,7 +11,6 @@ body {
   align-items: center;
   height: 100vh;
   position: relative;
-  background: url("/Araxa suites/img/concha.png") no-repeat center center fixed; /* Imagem de fundo centralizada e fixa */
   position: relative; /* Para o posicionamento relativo do conteúdo interno */
   width: 100vw; /* Largura total da viewport */
   height: 100vh; /* Altura total da viewport */

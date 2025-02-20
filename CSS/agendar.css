@@ -14,6 +14,18 @@
   flex-direction: row;
 }
 
+.img-fundo {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+}
+
+.img-fundo img {
+  width: 100%;
+  height: auto;
+}
+
 #calendar {
   background: white;
   border-radius: 8px;
